@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+body,
+.input::placeholder,
+option,
+button{
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial,
+  sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  padding: 10px;
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(230, 230, 230, 1);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(230, 230, 230, 1);
+  box-shadow: 0px 6px 5px 0px rgba(230, 230, 230, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-item{
+  font-size: 20px;
+  letter-spacing: 2.5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-item:hover{
+  text-decoration: none;
+  color: #4a4a4a !important;
 }
 
-.App-link {
-  color: #61dafb;
+.select,.select select{
+  width: 100%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.language{
+  text-transform: capitalize;
+}
+
+.issue-label{
+  transform: translateX(10px);
+}
+
+th{
+  font-weight: bold;
 }
