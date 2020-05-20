@@ -4,7 +4,7 @@ import React from 'react'
 import 'bulma/css/bulma.min.css'
 import './App.css'
 const fetch = require('isomorphic-fetch')
-
+const BASE_URL = 'https://github.com'
 const Collections = ({issues})=>{
   function createMarkup(html) {
     return {__html: html};
@@ -27,13 +27,17 @@ const Collections = ({issues})=>{
           {
             issues.map((issue,index) => {
               const repo = issue.repository_url.split('/')
+              const owner_name = `${repo[repo.length - 2]}`
+              const repo_name = `${repo[repo.length - 1]}`
+
+
               const updated_Date = `${new Date(issue.updated_at).getDate()}/${new Date(issue.updated_at).getMonth()}/${new Date(issue.updated_at).getFullYear()}`
               const labels = issue.labels
               return(
                 <tr>
                   <th> <p style={{fontWeight:'bold'}}> {index} </p> </th>
                   <td> {issue.title} </td>
-                  <td> {`${repo[repo.length - 2 ]}/${repo[repo.length - 1]}`}</td>
+                  <td> <a href={`${BASE_URL}/${owner_name}/${repo_name}`} target='_blank'>{`${owner_name}/${repo_name}`}</a> </td>
                   <td> {issue.state} </td>
 
                   <td> {updated_Date} </td>
