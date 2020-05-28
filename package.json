@@ -6,12 +6,14 @@
     "@testing-library/jest-dom": "^5.8.0",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^10.3.1",
+    "bootstrap": "4.5.0",
     "bulma": "0.8.2",
     "isomorphic-fetch": "2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-markdown": "4.3.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "standard": "14.3.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +23,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "browserslist": {
     "production": [
