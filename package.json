@@ -5,7 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.8.0",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^10.3.1",
+    "@testing-library/user-event": "^10.4.0",
     "bootstrap": "4.5.0",
     "bulma": "0.8.2",
     "isomorphic-fetch": "2.2.1",
