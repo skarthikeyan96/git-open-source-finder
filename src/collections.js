@@ -1,5 +1,4 @@
 import React from 'react'
-
 const BASE_URL = 'https://github.com'
 
 const Collections = ({ issues, selectionLabel }) => {
@@ -9,15 +8,15 @@ const Collections = ({ issues, selectionLabel }) => {
         {' '}
         <p className='text-danger'>
           {' '}
-            No issues found for the label for {selectionLabel}
+            No issues found for the label - {selectionLabel}
         </p>{' '}
       </div>
     )
   }
   return (
     <div className='container-fluid table-container'>
-      <table className='table table-striped table-bordered table-hover table-responsive'>
-        <thead>
+      <table className='table table-striped table-bordered table-hover'>
+        <thead className='thead-dark'>
           <tr>
             <th> Issue no</th>
             <th> Issue Title</th>
@@ -31,12 +30,8 @@ const Collections = ({ issues, selectionLabel }) => {
             const repo = issue.repository_url.split('/')
             const ownerName = `${repo[repo.length - 2]}`
             const repoName = `${repo[repo.length - 1]}`
-
-            const updatedDate = `${new Date(
-                issue.updated_at
-              ).getDate()}/${new Date(issue.updated_at).getMonth()}/${new Date(
-                issue.updated_at
-              ).getFullYear()}`
+            const d = new Date(issue.updated_at)
+            const updatedDate = d.getDate() + '-' + (d.getMonth() + 1) + '-' + d.getFullYear()
             return (
               <tr key={issue.id}>
                 <th>
