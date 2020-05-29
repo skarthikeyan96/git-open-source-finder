@@ -1,4 +1,4 @@
-                    Open Source finder
+# Open Source Finder
 
 App which helps the user to find the beginner friendly open source issues based on the programming language which they like. 
 
